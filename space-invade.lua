@@ -6,7 +6,7 @@ function Image(img)
 		local name = pandoc.utils.stringify(doc.meta.name)
 		local am = pandoc.utils.stringify(doc.meta.id)
 		local caption = pandoc.utils.stringify(doc.meta.caption)
-		local content = "> " .. caption .. " \n>>" .. "Student Fullname:" .. name .. "\nStudent Identification Number:" ..am
+		local content = " \n>>" .. "Student Fullname:" .. name .. ' \n' "\nStudent Identification Number:" ..am " \n" "> " .. caption .. 
 		return pandoc.RawInline('markdown',content)
 	end
 end
